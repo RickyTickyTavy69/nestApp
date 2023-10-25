@@ -15,7 +15,7 @@ import { AssetsModule } from './assets/assets.module';
       envFilePath: ".env-example",
     }),
     MongooseModule.forRoot(
-      ""
+      "mongodb://mongo:v7RyEaxoRcv8aGVtV24q@containers-us-west-209.railway.app:6094"
     ),
     CloudinaryModule,
     OpenaiModule,
