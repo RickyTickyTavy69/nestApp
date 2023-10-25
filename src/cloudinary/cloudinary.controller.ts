@@ -1,4 +1,13 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from "@nestjs/common";
+import { CloudinaryService } from "./cloudinary.service";
 
-@Controller('cloudinary')
-export class CloudinaryController {}
+@Controller("cloudinary")
+export class CloudinaryController {
+  constructor(private readonly cloudinaryService: CloudinaryService) {}
+
+  @Get()
+  async getAllAssets() {
+    const assets = this.cloudinaryService.getAllAssets();
+    return assets;
+  }
+}
